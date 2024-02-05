@@ -1,16 +1,19 @@
-# This is a sample Python script.
+# This is a Prime Determiner Script in Python
+# This imports math function
+import math
+while True:
+    number = int(input("Enter a Number: "))
+    flag = False
+    for x in range(2, math.floor(math.sqrt(number) + 1)):
+        if number % x == 0:
+            flag = True
+            break
+    if flag:
+        print(number, "is a composite number.")
+    else:
+        print(number, "is a prime number.")
+    connect = input("Do you want to continue?(y/n): ")
+    if connect.lower() == "n":
+        break
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
